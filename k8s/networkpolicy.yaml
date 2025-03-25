@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: only-allow-python-api
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: typescript-api
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: rust-api
