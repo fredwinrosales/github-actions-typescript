@@ -11,4 +11,4 @@ spec:
   - from:
     - podSelector:
         matchLabels:
-          app: rust-api
+          app: python-api-calls-service-b
